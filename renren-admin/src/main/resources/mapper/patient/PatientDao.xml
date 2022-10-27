@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wyl.modules.patient.dao.PatientDao">
+
+    <resultMap type="com.wyl.modules.patient.entity.PatientEntity" id="patientMap">
+        <result property="patientid" column="PatientID"/>
+        <result property="patientname" column="PatientName"/>
+        <result property="age" column="Age"/>
+        <result property="sex" column="Sex"/>
+        <result property="birthday" column="Birthday"/>
+        <result property="height" column="Height"/>
+        <result property="weight" column="Weight"/>
+        <result property="bmi" column="Bmi"/>
+        <result property="operatorid" column="OperatorID"/>
+        <result property="createtime" column="CreateTime"/>
+        <result property="recordisdeleted" column="RecordIsDeleted"/>
+        <result property="recordupdatetime" column="RecordUpdateTime"/>
+        <result property="reviser" column="Reviser"/>
+    </resultMap>
+
+
+</mapper>
