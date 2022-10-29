@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.*;
 import springfox.documentation.annotations.ApiIgnore;
 
 import javax.servlet.http.HttpServletResponse;
+import java.text.DecimalFormat;
 import java.util.List;
 import java.util.Map;
 
@@ -84,7 +85,9 @@ public class PatientController {
     public Result update(@RequestBody PatientDTO dto){
         //效验数据
         ValidatorUtils.validateEntity(dto, UpdateGroup.class, DefaultGroup.class);
-
+        double bmi = dto.getWeight() / (dto.getHeight() * dto.getHeight()/10000);
+        String bmiStr = new DecimalFormat("#.00").format(bmi);
+        dto.setBmi(bmiStr);
         patientService.update(dto);
 
         return new Result();

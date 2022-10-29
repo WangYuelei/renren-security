@@ -1,9 +1,12 @@
 package com.wyl.modules.patient.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-import java.sql.Date;
+import java.util.Date;
 
 
 /**
@@ -19,6 +22,7 @@ public class PatientEntity {
     /**
      * 
      */
+    @TableId( type = IdType.AUTO)
 	private Integer patientid;
     /**
      * 姓名
@@ -59,6 +63,7 @@ public class PatientEntity {
     /**
      * 是否删除
      */
+    @TableLogic(value = "0", delval = "1")
 	private Integer recordisdeleted;
     /**
      * 更新时间
