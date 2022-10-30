@@ -22,11 +22,21 @@ public class PatientServiceImpl extends CrudServiceImpl<PatientDao, PatientEntit
 
     @Override
     public QueryWrapper<PatientEntity> getWrapper(Map<String, Object> params){
-        String id = (String)params.get("id");
-
         QueryWrapper<PatientEntity> wrapper = new QueryWrapper<>();
-        wrapper.eq(StringUtils.isNotBlank(id), "id", id);
-
+        //创建者
+        String operatorid = (String)params.get("operatorid");
+        wrapper.eq(StringUtils.isNotBlank(operatorid), "operatorid", operatorid);
+        //patientId
+        String patientid = (String)params.get("patientid");
+        wrapper.eq(StringUtils.isNotBlank(patientid), "patientid", patientid);
+        //patientName
+        String patientname = (String)params.get("patientname");
+        wrapper.like(StringUtils.isNotBlank(patientname), "patientname", patientname);
+        //创建时间
+        String createStart = (String)params.get("createStart");
+        wrapper.ge(StringUtils.isNotBlank(createStart), "CreateTime", createStart);
+        String createEnd = (String)params.get("createEnd");
+        wrapper.le(StringUtils.isNotBlank(createEnd), "CreateTime", createEnd);
         return wrapper;
     }
 
