@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.wyl.modules.ppgData.dao.PpgDataDao">
+
+    <resultMap type="com.wyl.modules.ppgData.entity.PpgDataEntity" id="ppgDataMap">
+        <result property="dataid" column="DataID"/>
+        <result property="patientid" column="PatientID"/>
+        <result property="operatorid" column="OperatorID"/>
+        <result property="collectingdevice" column="CollectingDevice"/>
+        <result property="samplerate" column="SampleRate"/>
+        <result property="devicemodel" column="DeviceModel"/>
+        <result property="devicesn" column="DeviceSN"/>
+        <result property="osversion" column="OSVersion"/>
+        <result property="deviceid" column="DeviceID"/>
+        <result property="led1050nm" column="LED_1050nm"/>
+        <result property="led940nm" column="LED_940nm"/>
+        <result property="led650nm" column="LED_650nm"/>
+        <result property="environmentLight" column="Environment_Light"/>
+        <result property="mtp10TemperatureSelf" column="MTP10_Temperature_Self"/>
+        <result property="mtp10RadiationTemperature" column="MTP10_Radiation_Temperature"/>
+        <result property="ntcConductionThermal" column="NTC_Conduction_Thermal"/>
+        <result property="sht30EnvironmentTemperature" column="SHT30_Environment_Temperature"/>
+        <result property="sht30EnvironmentHumidity" column="SHT30_Environment_Humidity"/>
+        <result property="sht30FingerTemperature" column="SHT30_Finger_Temperature"/>
+        <result property="sht30FingerHumidity" column="SHT30_Finger_Humidity"/>
+        <result property="lasteatingtime" column="LastEatingTime"/>
+        <result property="batteryVoltage" column="Battery_Voltage"/>
+        <result property="bgdevicenumber" column="BGDeviceNumber"/>
+        <result property="testendtime" column="TestEndTime"/>
+        <result property="uploadtime" column="UploadTime"/>
+        <result property="recordupdatetime" column="RecordUpdateTime"/>
+        <result property="recordisdeleted" column="RecordIsDeleted"/>
+        <result property="bgdeviceversion" column="BGDeviceVersion"/>
+        <result property="reviser" column="Reviser"/>
+        <result property="note" column="Note"/>
+        <result property="sypressure" column="SyPressure"/>
+        <result property="sypressure2" column="SyPressure2"/>
+        <result property="diapressure" column="DiaPressure"/>
+        <result property="diapressure2" column="DiaPressure2"/>
+        <result property="contrastbloodsugar" column="ContrastBloodSugar"/>
+        <result property="eatingstatus" column="EatingStatus"/>
+        <result property="truebs" column="TrueBS"/>
+        <result property="isreplace" column="IsReplace"/>
+        <result property="replaceaitype" column="ReplaceAIType"/>
+    </resultMap>
+
+
+</mapper>
